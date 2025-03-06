@@ -12,11 +12,14 @@ export const signupSchema: ObjectSchema = Joi.object().keys({
     'string.min': 'Invalid password',
     'string.empty': 'Password is required',
   }),
-  email: Joi.string().required().email().messages({
-    'string.base': 'Email must be of type string',
-    'string.email': 'Invalid email',
-    'string.empty': 'Email is required',
-  }),
+  email: Joi.string()
+    .required()
+    .email({ tlds: { allow: false } })
+    .messages({
+      'string.base': 'Email must be of type string',
+      'string.email': 'Invalid email',
+      'string.empty': 'Email is required',
+    }),
 });
 
 export const signupClientSchema = Joi.object({
@@ -32,10 +35,13 @@ export const signupClientSchema = Joi.object({
     'string.min': 'Confirm password must be at least 8 characters',
     'any.required': 'Confirm password is required',
   }),
-  email: Joi.string().email().required().messages({
-    'string.email': 'Invalid email address',
-    'any.required': 'Email is required',
-  }),
+  email: Joi.string()
+    .email({ tlds: { allow: false } })
+    .required()
+    .messages({
+      'string.email': 'Invalid email address',
+      'any.required': 'Email is required',
+    }),
 }).custom((data, helpers) => {
   if (data.password !== data.confirmPassword) {
     return helpers.error('any.invalid', { message: "Password don't match" });
