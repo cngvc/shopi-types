@@ -5,6 +5,7 @@ export interface IStoreDocument {
   _id?: string | ObjectId;
   name: string;
   ownerId?: string;
+  authOwnerId?: string;
   username?: string;
   email?: string;
   description: string;
