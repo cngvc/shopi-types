@@ -1,3 +1,5 @@
+export { ICartItem } from './cart-item.interface';
+
 export { ICreateProduct, IProductDocument } from './product.interface';
 
 export { IEmailLocals } from './email.interface';
