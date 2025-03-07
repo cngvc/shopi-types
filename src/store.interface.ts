@@ -11,7 +11,6 @@ export interface IStoreDocument {
   ratingsCount?: number;
   ratingSum?: number;
   ratingCategories?: IRatingCategories;
-  responseTime: number;
   socialLinks: string[];
   completedOrders?: number;
   cancelledOrders?: number;
