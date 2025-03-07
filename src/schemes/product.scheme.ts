@@ -57,6 +57,8 @@ const productUpdateSchema: ObjectSchema = Joi.object().keys({
     'any.required': 'Quantity is required',
     'number.greater': 'Quantity must be greater than 0',
   }),
+  categories: Joi.array().items(Joi.string()).optional(),
+  tags: Joi.array().items(Joi.string()).optional(),
 });
 
 export { productCreateSchema, productUpdateSchema };
