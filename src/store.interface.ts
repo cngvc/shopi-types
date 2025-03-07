@@ -1,22 +1,12 @@
 import { ObjectId } from 'mongoose';
 import { IRatingCategories } from './review.interface';
 
-export type StoreType =
-  | string
-  | string[]
-  | number
-  | IRatingCategories
-  | Date
-  | unknown
-  | undefined;
-
-export interface IStoreDocument extends Record<string, StoreType> {
+export interface IStoreDocument {
   _id?: string | ObjectId;
-  profilePublicId?: string;
-  fullName: string;
+  name: string;
+  ownerId?: string;
   username?: string;
   email?: string;
-  profilePicture?: string;
   description: string;
   ratingsCount?: number;
   ratingSum?: number;
@@ -28,4 +18,5 @@ export interface IStoreDocument extends Record<string, StoreType> {
   totalEarnings?: number;
   totalProducts?: number;
   createdAt?: Date | string;
+  updatedAt?: Date | string;
 }

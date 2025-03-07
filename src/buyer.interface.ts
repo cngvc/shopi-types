@@ -2,16 +2,11 @@ import { ObjectId } from 'mongoose';
 
 export interface IBuyerDocument {
   _id?: string | ObjectId;
+  authId?: string;
+  storeId?: string;
   username?: string;
   email?: string;
-  profilePicture?: string;
-  isStore?: boolean;
   purchasedProducts: string[];
   createdAt?: Date | string;
   updatedAt?: Date | string;
-}
-
-export interface IReduxBuyer {
-  type?: string;
-  payload: IBuyerDocument;
 }

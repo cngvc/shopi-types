@@ -9,21 +9,15 @@ export interface IReviewMessageDetails {
   type: string;
 }
 
-export interface IRatingTypes {
-  [key: string]: string;
-}
-
 export interface IReviewDocument {
   _id?: string;
   productId: string;
   reviewerId: string;
+  orderId: string;
   storeId: string;
   review: string;
-  reviewerImage: string;
   rating: number;
-  orderId: string;
   createdAt: Date | string;
-  reviewerUsername: string;
   reviewType?: string;
 }
 

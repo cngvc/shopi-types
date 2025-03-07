@@ -14,25 +14,16 @@ export {
 
 export { IBuyerDocument } from './buyer.interface';
 
-export { StoreType, IStoreDocument } from './store.interface';
+export { IStoreDocument } from './store.interface';
 
 export {
   IReviewMessageDetails,
-  IRatingTypes,
   IReviewDocument,
   IRatingCategoryItem,
   IRatingCategories,
 } from './review.interface';
 
-export {
-  IConversationDocument,
-  IMessageDocument,
-  IMessageDetails,
-  IChatBoxProps,
-  IChatStoreProps,
-  IChatBuyerProps,
-  IChatMessageProps,
-} from './chat.interface';
+export { IConversationDocument, IMessageDocument } from './chat.interface';
 
 export { SocketEvents } from './socket-events';
 
