@@ -1,5 +1,5 @@
 export interface IStoreDocument {
-  storePublicId: string;
+  storePublicId?: string;
   name: string;
   username?: string;
   email?: string;
