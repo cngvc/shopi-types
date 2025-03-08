@@ -4,6 +4,13 @@ export interface IConversationDocument {
   _id: mongoose.Types.ObjectId | string;
   conversationId: string;
   participants: string[];
+  lastMessage?: {
+    messageId?: string;
+    senderId?: string;
+    body?: string;
+    createdAt?: Date | string;
+  };
+  updatedAt?: Date | string;
 }
 
 export interface IMessageDocument {
