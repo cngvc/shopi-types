@@ -1,11 +1,6 @@
 import Joi, { ObjectSchema } from 'joi';
 
 const productCreateSchema: ObjectSchema = Joi.object().keys({
-  storeId: Joi.string().required().messages({
-    'string.base': 'Store Id must be of type string',
-    'string.empty': 'Store Id is required',
-    'any.required': 'Store Id is required',
-  }),
   thumb: Joi.string().optional().allow(null, ''),
   name: Joi.string().required().messages({
     'string.base': 'Please add a product title',

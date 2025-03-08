@@ -1,22 +1,15 @@
-import { ObjectId } from 'mongoose';
-import { IRatingCategories } from './review.interface';
-
 export interface IStoreDocument {
-  _id?: ObjectId | string;
+  storePublicId: string;
   name: string;
-  ownerId?: string;
-  authOwnerId?: string;
   username?: string;
   email?: string;
+  ownerPublicId?: string;
+  ownerAuthId?: string;
   description: string;
-  ratingsCount?: number;
-  ratingSum?: number;
-  ratingCategories?: IRatingCategories;
   socialLinks: string[];
   completedOrders?: number;
   cancelledOrders?: number;
   totalEarnings?: number;
   totalProducts?: number;
   createdAt?: Date | string;
-  updatedAt?: Date | string;
 }

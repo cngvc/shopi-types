@@ -1,7 +1,7 @@
 import Joi, { ObjectSchema } from 'joi';
 
 export const createConversionSchema: ObjectSchema = Joi.object().keys({
-  receiverId: Joi.string().required().messages({
+  receiverAuthId: Joi.string().required().messages({
     'string.base': 'Receiver username is required',
     'string.empty': 'Receiver username is required',
     'any.required': 'Receiver username is required',
@@ -10,7 +10,7 @@ export const createConversionSchema: ObjectSchema = Joi.object().keys({
 
 export const sendMessageSchema: ObjectSchema = Joi.object().keys({
   conversationId: Joi.string().optional().allow(null, ''),
-  receiverId: Joi.string().required().messages({
+  receiverAuthId: Joi.string().required().messages({
     'string.base': 'Receiver username is required',
     'string.empty': 'Receiver username is required',
     'any.required': 'Receiver username is required',

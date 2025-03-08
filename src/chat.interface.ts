@@ -9,31 +9,30 @@ type ConversationType =
   | undefined;
 
 export type ILastMessage = {
-  messageId?: string;
-  senderId?: string;
-  body?: string;
+  messagePublicId: string;
+  senderAuthId: string;
+  body: string;
   createdAt?: Date | string;
 };
 
 export interface IConversationDocument
   extends Record<string, ConversationType> {
-  _id: ObjectId | string;
-  conversationId: string;
+  conversationPublicId?: string;
   participants: string[];
   lastMessage?: ILastMessage;
   updatedAt?: Date | string;
   [key: string]: ConversationType;
 }
 
-type MessageType = ObjectId | string | boolean | Date | undefined;
+type MessageType = string | boolean | Date | undefined;
 
 export interface IMessageDocument extends Record<string, MessageType> {
-  _id?: ObjectId | string;
-  conversationId?: string;
-  body?: string;
-  senderId?: string;
-  receiverId?: string;
+  messagePublicId?: string;
+  conversationPublicId: string;
+  senderAuthId: string;
+  receiverAuthId: string;
   isRead?: boolean;
+  body: string;
   createdAt?: Date | string;
   [key: string]: MessageType;
 }

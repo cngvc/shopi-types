@@ -1,42 +1,40 @@
-import { ObjectId } from 'mongoose';
+import { Mixed } from 'mongoose';
 import { IRatingCategories } from './review.interface';
 
 export type CreateProductType =
   | string
   | string[]
   | number
-  | unknown
+  | boolean
   | undefined;
 
 export interface ICreateProduct extends Record<string, CreateProductType> {
-  storeId?: string;
   name: string;
   thumb?: string;
-  quantity?: number;
+  quantity: number;
   description: string;
   isPublished?: boolean;
   price: number;
   tags?: string[];
-  categories: string[];
+  categories?: string[];
 }
 
 export type ProductType =
-  | ObjectId
   | string
   | string[]
   | number
   | boolean
   | Date
   | IRatingCategories
-  | undefined;
+  | undefined
+  | Mixed;
 
 export interface IProductDocument extends Record<string, ProductType> {
-  _id?: ObjectId | string;
-  id?: string;
-  storeId?: ObjectId | string;
+  productPublicId?: string;
+  storePublicId?: string;
   name: string;
   thumb?: string;
-  quantity?: number;
+  quantity: number;
   description: string;
   slug?: string;
   isPublished?: boolean;
@@ -47,5 +45,6 @@ export interface IProductDocument extends Record<string, ProductType> {
   tags: string[];
   categories: string[];
   createdAt?: Date | string;
+  attributes?: Mixed;
   [key: string]: ProductType;
 }
