@@ -1,9 +1,14 @@
 import { ObjectId } from 'mongoose';
 import { IRatingCategories } from './review.interface';
 
-export type ProductType = string | string[] | number | unknown | undefined;
+export type CreateProductType =
+  | string
+  | string[]
+  | number
+  | unknown
+  | undefined;
 
-export interface ICreateProduct extends Record<string, ProductType> {
+export interface ICreateProduct extends Record<string, CreateProductType> {
   storeId?: string;
   name: string;
   thumb?: string;
@@ -15,10 +20,20 @@ export interface ICreateProduct extends Record<string, ProductType> {
   categories: string[];
 }
 
-export interface IProductDocument {
-  _id?: string | ObjectId;
-  id?: string | ObjectId;
-  storeId?: string | ObjectId;
+export type ProductType =
+  | ObjectId
+  | string
+  | string[]
+  | number
+  | boolean
+  | Date
+  | IRatingCategories
+  | undefined;
+
+export interface IProductDocument extends Record<string, ProductType> {
+  _id?: ObjectId | string;
+  id?: string;
+  storeId?: ObjectId | string;
   name: string;
   thumb?: string;
   quantity?: number;
@@ -32,5 +47,5 @@ export interface IProductDocument {
   tags: string[];
   categories: string[];
   createdAt?: Date | string;
-  toJSON?: () => unknown;
+  [key: string]: ProductType;
 }

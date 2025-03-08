@@ -1,7 +1,7 @@
-import mongoose from 'mongoose';
+import { ObjectId } from 'mongoose';
 
 type ConversationType =
-  | mongoose.Types.ObjectId
+  | ObjectId
   | string
   | string[]
   | ILastMessage
@@ -17,7 +17,7 @@ export type ILastMessage = {
 
 export interface IConversationDocument
   extends Record<string, ConversationType> {
-  _id: mongoose.Types.ObjectId | string;
+  _id: ObjectId | string;
   conversationId: string;
   participants: string[];
   lastMessage?: ILastMessage;
@@ -25,15 +25,10 @@ export interface IConversationDocument
   [key: string]: ConversationType;
 }
 
-type MessageType =
-  | mongoose.Types.ObjectId
-  | string
-  | boolean
-  | Date
-  | undefined;
+type MessageType = ObjectId | string | boolean | Date | undefined;
 
 export interface IMessageDocument extends Record<string, MessageType> {
-  _id?: mongoose.Types.ObjectId | string;
+  _id?: ObjectId | string;
   conversationId?: string;
   body?: string;
   senderId?: string;

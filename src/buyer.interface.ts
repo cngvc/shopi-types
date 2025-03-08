@@ -1,7 +1,7 @@
 import { ObjectId } from 'mongoose';
 
 export interface IBuyerDocument {
-  _id?: string | ObjectId;
+  _id?: ObjectId | string;
   authId?: string;
   storeId?: string;
   username?: string;

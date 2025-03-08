@@ -2,7 +2,7 @@ import { ObjectId } from 'mongoose';
 import { IRatingCategories } from './review.interface';
 
 export interface IStoreDocument {
-  _id?: string | ObjectId;
+  _id?: ObjectId | string;
   name: string;
   ownerId?: string;
   authOwnerId?: string;
