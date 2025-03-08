@@ -1,5 +1,7 @@
 export { ICartItem } from './cart-item.interface';
 
+export { ElasticsearchIndexes } from './elasticsearch-indexes';
+
 export { ICreateProduct, IProductDocument } from './product.interface';
 
 export { IEmailLocals } from './email.interface';
