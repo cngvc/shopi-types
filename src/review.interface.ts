@@ -1,7 +1,7 @@
 export interface IReviewMessageDetails {
   productPublicId?: string;
   reviewerPublicId?: string;
-  storePublicId?: string;
+  storePublicId: string;
   review?: string;
   rating?: number;
   orderPublicId?: string;

@@ -31,7 +31,7 @@ export type ProductType =
 
 export interface IProductDocument extends Record<string, ProductType> {
   productPublicId?: string;
-  storePublicId?: string;
+  storePublicId: string;
   name: string;
   thumb?: string;
   quantity: number;
