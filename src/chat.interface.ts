@@ -11,6 +11,7 @@ export interface IConversationDocument {
     createdAt?: Date | string;
   };
   updatedAt?: Date | string;
+  [key: string]: string | {} | undefined;
 }
 
 export interface IMessageDocument {
@@ -21,4 +22,5 @@ export interface IMessageDocument {
   receiverId?: string;
   isRead?: boolean;
   createdAt?: Date | string;
+  [key: string]: string | {} | undefined;
 }
