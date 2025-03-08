@@ -29,7 +29,6 @@ type MessageType =
   | mongoose.Types.ObjectId
   | string
   | boolean
-  | ILastMessage
   | Date
   | undefined;
 
