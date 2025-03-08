@@ -9,7 +9,7 @@ export const createConversionSchema: ObjectSchema = Joi.object().keys({
 });
 
 export const sendMessageSchema: ObjectSchema = Joi.object().keys({
-  conversationId: Joi.string().optional().allow(null, ''),
+  conversationPublicId: Joi.string().optional().allow(null, ''),
   receiverAuthId: Joi.string().required().messages({
     'string.base': 'Receiver username is required',
     'string.empty': 'Receiver username is required',
