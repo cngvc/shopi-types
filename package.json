@@ -1,5 +1,5 @@
 {
-  "version": "0.0.23",
+  "version": "0.0.24",
   "license": "MIT",
   "description": "Helpers library types for theshopi app",
   "engines": {
@@ -40,7 +40,6 @@
   "dependencies": {
     "express": "^4.21.2",
     "joi": "^17.13.3",
-    "mongoose": "^8.11.0",
     "tslib": "^2.8.1",
     "typescript": "^5.7.3"
   },

@@ -1,4 +1,3 @@
-import { Mixed } from 'mongoose';
 import { IRatingCategories } from './review.interface';
 
 export type CreateProductType =
@@ -27,7 +26,7 @@ export type ProductType =
   | Date
   | IRatingCategories
   | undefined
-  | Mixed;
+  | Record<string, any>;
 
 export interface IProductDocument extends Record<string, ProductType> {
   productPublicId?: string;
@@ -45,6 +44,6 @@ export interface IProductDocument extends Record<string, ProductType> {
   tags: string[];
   categories: string[];
   createdAt?: Date | string;
-  attributes?: Mixed;
+  attributes?: Record<string, any>;
   [key: string]: ProductType;
 }
