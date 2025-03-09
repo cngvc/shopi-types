@@ -42,3 +42,11 @@ export {
   signupSchema,
   storeSchema,
 } from './schemes';
+
+export {
+  IOrderItem,
+  IShipping,
+  IPayment,
+  OrderStatus,
+  IOrderDocument,
+} from './order.interface';

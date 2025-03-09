@@ -1,12 +1,4 @@
-import { ObjectId } from 'mongoose';
-
-type ConversationType =
-  | ObjectId
-  | string
-  | string[]
-  | ILastMessage
-  | Date
-  | undefined;
+type ConversationType = string | string[] | ILastMessage | Date | undefined;
 
 export type ILastMessage = {
   messagePublicId: string;
