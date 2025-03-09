@@ -8,3 +8,4 @@ export { productCreateSchema, productUpdateSchema } from './product.scheme';
 export { signinSchema } from './signin.scheme';
 export { signupClientSchema, signupSchema } from './signup.scheme';
 export { storeSchema } from './store.scheme';
+export { createOrderScheme } from './order.scheme';

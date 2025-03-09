@@ -1,8 +1,10 @@
+import { IShippingAddress } from './buyer.interface';
+
 type OrderType =
   | string
   | number
   | IOrderItem[]
-  | IShipping
+  | IShippingAddress
   | IPayment
   | OrderStatus
   | Date
@@ -13,14 +15,6 @@ export interface IOrderItem {
   name: string;
   quantity: number;
   price: number;
-}
-
-export interface IShipping {
-  address: string;
-  city: string;
-  country: string;
-  postalCode: string;
-  isDefault?: boolean;
 }
 
 export interface IPayment {
@@ -42,7 +36,7 @@ export interface IOrderDocument extends Record<string, OrderType> {
   items: IOrderItem[];
   shippingFee: number;
   totalAmount?: number;
-  shipping: IShipping;
+  shipping: IShippingAddress;
   payment: IPayment;
   paidAt?: Date | string;
   status?: OrderStatus;

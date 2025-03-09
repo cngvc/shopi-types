@@ -7,3 +7,12 @@ export interface IBuyerDocument {
   purchasedProducts: string[];
   createdAt?: Date | string;
 }
+
+export interface IShippingAddress {
+  shippingAddressPublicId?: string;
+  address: string;
+  city: string;
+  country: string;
+  postalCode: string;
+  isDefault?: boolean;
+}

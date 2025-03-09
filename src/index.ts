@@ -1,7 +1,5 @@
 export { ICartItem } from './cart-item.interface';
 
-export { ElasticsearchIndexes } from './elasticsearch-indexes';
-
 export { ICreateProduct, IProductDocument } from './product.interface';
 
 export { IEmailLocals } from './email.interface';
@@ -14,7 +12,7 @@ export {
   getErrorMessage,
 } from './helpers';
 
-export { IBuyerDocument } from './buyer.interface';
+export { IBuyerDocument, IShippingAddress } from './buyer.interface';
 
 export { IStoreDocument } from './store.interface';
 
@@ -27,26 +25,15 @@ export {
 
 export { IConversationDocument, IMessageDocument } from './chat.interface';
 
-export { SocketEvents } from './socket-events';
-
-export {
-  createConversionSchema,
-  sendMessageSchema,
-  changePasswordSchema,
-  emailSchema,
-  passwordSchema,
-  productCreateSchema,
-  productUpdateSchema,
-  signinSchema,
-  signupClientSchema,
-  signupSchema,
-  storeSchema,
-} from './schemes';
-
 export {
   IOrderItem,
-  IShipping,
   IPayment,
   OrderStatus,
   IOrderDocument,
 } from './order.interface';
+
+export { SocketEvents } from './socket-events';
+
+export * from './schemes';
+
+export { ElasticsearchIndexes } from './elasticsearch-indexes';
