@@ -34,8 +34,8 @@ export interface IOrderDocument extends Record<string, OrderType> {
   orderPublicId?: string;
   buyerPublicId: string;
   items: IOrderItem[];
-  shippingFee: number;
   totalAmount?: number;
+  shippingFee: number;
   shipping: IShippingAddress;
   payment: IPayment;
   paidAt?: Date | string;
