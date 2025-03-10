@@ -1,6 +1,6 @@
 import Joi, { ObjectSchema } from 'joi';
 
-const storeSchema: ObjectSchema = Joi.object().keys({
+const createStoreSchema: ObjectSchema = Joi.object().keys({
   name: Joi.string().required().messages({
     'string.base': 'Name must be of type string',
     'string.empty': 'Name is required',
@@ -19,4 +19,4 @@ const storeSchema: ObjectSchema = Joi.object().keys({
   createdAt: Joi.string().optional(),
 });
 
-export { storeSchema };
+export { createStoreSchema };
