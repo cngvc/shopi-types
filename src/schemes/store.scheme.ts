@@ -16,7 +16,6 @@ const createStoreSchema: ObjectSchema = Joi.object().keys({
   cancelledOrders: Joi.number().optional(),
   totalEarnings: Joi.number().optional(),
   totalProducts: Joi.number().optional(),
-  createdAt: Joi.string().optional(),
 });
 
 export { createStoreSchema };
