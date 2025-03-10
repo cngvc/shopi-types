@@ -15,5 +15,4 @@ export interface IShippingAddress {
   city: string;
   country: string;
   postalCode: string;
-  isDefault?: boolean;
 }

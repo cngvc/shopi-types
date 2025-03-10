@@ -12,13 +12,20 @@ type OrderType =
 
 export interface IOrderItem {
   productPublicId: string;
-  name: string;
   quantity: number;
   price: number;
 }
 
+export enum PaymentMethod {
+  cod = 'cod',
+  credit = 'credit',
+  paypal = 'paypal',
+  stripe = 'stripe',
+  crypto = 'crypto',
+}
+
 export interface IPayment {
-  method: string;
+  method: PaymentMethod;
   transactionId: string;
 }
 

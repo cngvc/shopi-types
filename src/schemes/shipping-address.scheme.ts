@@ -16,7 +16,4 @@ export const shippingAddressSchema = Joi.object({
   postalCode: Joi.string().optional().allow('').messages({
     'string.base': 'Postal code must be a string.',
   }),
-  isDefault: Joi.boolean().optional().messages({
-    'boolean.base': 'isDefault must be a boolean.',
-  }),
 });
