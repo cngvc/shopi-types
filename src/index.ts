@@ -28,8 +28,9 @@ export { IConversationDocument, IMessageDocument } from './chat.interface';
 export {
   IOrderItem,
   IPayment,
-  OrderStatus,
   IOrderDocument,
+  OrderStatus,
+  PaymentMethod,
 } from './order.interface';
 
 export { SocketEvents } from './socket-events';
