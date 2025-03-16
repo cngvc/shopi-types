@@ -1,5 +1,5 @@
 {
-  "version": "0.0.30",
+  "version": "0.0.1",
   "license": "MIT",
   "description": "Helpers library types for theshopi app",
   "engines": {
@@ -17,26 +17,24 @@
     "trailingComma": "es5"
   },
   "keywords": [],
-  "name": "@cngvc/shopi-shared-types",
+  "name": "@cngvc/shopi-types",
   "author": "joe",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cngvc/shopi-shared-types.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
+  "publishConfig": {},
   "files": [
     "build",
     "src"
   ],
   "exports": {
     ".": {
-      "import": "./src/index.js",
-      "require": "./src/index.js"
+      "import": "./build/src/index.js",
+      "require": "./build/src/index.js"
     }
   },
-  "types": "./src/index.d.ts",
+  "types": "./build/src/index.d.ts",
   "dependencies": {
     "express": "^4.21.2",
     "joi": "^17.13.3",
