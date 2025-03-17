@@ -6,13 +6,18 @@ export interface IBuyerDocument {
   email: string;
   purchasedProducts: string[];
   shippingAddress?: IShippingAddress;
+  payment: IPayment;
   createdAt?: Date | string;
 }
 
 export interface IShippingAddress {
-  shippingAddressPublicId?: string;
   address: string;
   city: string;
   country: string;
   postalCode: string;
+}
+
+export interface IPayment {
+  method?: string;
+  metadata?: Record<string, any>;
 }
