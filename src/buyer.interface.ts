@@ -18,6 +18,14 @@ export interface IShippingAddress {
 }
 
 export interface IPayment {
-  method?: string;
+  method?: PaymentMethod;
   metadata?: Record<string, any>;
+}
+
+export enum PaymentMethod {
+  cod = 'cod',
+  credit = 'credit',
+  paypal = 'paypal',
+  stripe = 'stripe',
+  crypto = 'crypto',
 }

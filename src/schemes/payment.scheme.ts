@@ -1,4 +1,4 @@
-import { PaymentMethod } from '../order.interface';
+import { PaymentMethod } from './../buyer.interface';
 import Joi, { ObjectSchema } from 'joi';
 
 const paymentScheme: ObjectSchema = Joi.object().keys({

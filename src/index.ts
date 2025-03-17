@@ -12,7 +12,12 @@ export {
   getErrorMessage,
 } from './helpers';
 
-export { IBuyerDocument, IShippingAddress } from './buyer.interface';
+export {
+  IBuyerDocument,
+  IShippingAddress,
+  IPayment,
+  PaymentMethod,
+} from './buyer.interface';
 
 export { IStoreDocument } from './store.interface';
 
@@ -25,13 +30,7 @@ export {
 
 export { IConversationDocument, IMessageDocument } from './chat.interface';
 
-export {
-  IOrderItem,
-  IPayment,
-  IOrderDocument,
-  OrderStatus,
-  PaymentMethod,
-} from './order.interface';
+export { IOrderItem, IOrderDocument, OrderStatus } from './order.interface';
 
 export { SocketEvents } from './socket-events';
 

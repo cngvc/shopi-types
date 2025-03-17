@@ -1,4 +1,4 @@
-import { IShippingAddress } from './buyer.interface';
+import { IPayment, IShippingAddress } from './buyer.interface';
 
 type OrderType =
   | string
@@ -14,19 +14,6 @@ export interface IOrderItem {
   productPublicId: string;
   quantity: number;
   price: number;
-}
-
-export enum PaymentMethod {
-  cod = 'cod',
-  credit = 'credit',
-  paypal = 'paypal',
-  stripe = 'stripe',
-  crypto = 'crypto',
-}
-
-export interface IPayment {
-  method: PaymentMethod;
-  transactionId: string;
 }
 
 export enum OrderStatus {
