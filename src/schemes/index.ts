@@ -8,5 +8,5 @@ export { productCreateSchema, productUpdateSchema } from './product.scheme';
 export { signinSchema } from './signin.scheme';
 export { signupClientSchema, signupSchema } from './signup.scheme';
 export { createStoreSchema } from './store.scheme';
-export { createOrderScheme } from './order.scheme';
+export { paymentMethodScheme } from './order.scheme';
 export { shippingAddressSchema } from './shipping-address.scheme';

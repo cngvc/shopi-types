@@ -1,7 +1,7 @@
 import { PaymentMethod } from './../order.interface';
 import Joi, { ObjectSchema } from 'joi';
 
-const createOrderScheme: ObjectSchema = Joi.object().keys({
+const paymentMethodScheme: ObjectSchema = Joi.object().keys({
   payment: Joi.object({
     method: Joi.string()
       .valid(...Object.values(PaymentMethod))
@@ -14,4 +14,4 @@ const createOrderScheme: ObjectSchema = Joi.object().keys({
   }).required(),
 });
 
-export { createOrderScheme };
+export { paymentMethodScheme };
