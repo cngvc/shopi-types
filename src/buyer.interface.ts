@@ -19,6 +19,7 @@ export interface IShippingAddress {
 
 export interface IPayment {
   method?: PaymentMethod;
+  transactionId?: string;
   metadata?: Record<string, any>;
 }
 
