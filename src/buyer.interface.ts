@@ -6,7 +6,7 @@ export interface IBuyerDocument {
   email: string;
   purchasedProducts: string[];
   shippingAddress?: IShippingAddress;
-  payment: IPayment;
+  payment?: IPayment;
   createdAt?: Date | string;
 }
 
