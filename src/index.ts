@@ -15,8 +15,7 @@ export {
 export {
   IBuyerDocument,
   IShippingAddress,
-  IPayment,
-  PaymentMethod,
+  IBuyerPayment,
 } from './buyer.interface';
 
 export { IStoreDocument } from './store.interface';
@@ -30,7 +29,9 @@ export {
 
 export { IConversationDocument, IMessageDocument } from './chat.interface';
 
-export { IOrderItem, IOrderDocument, OrderStatus } from './order.interface';
+export { IOrderPayment, IOrderDocument, OrderStatus } from './order.interface';
+
+export { IPaymentDocument, PaymentMethod } from './payment.interface';
 
 export { SocketEvents } from './socket-events';
 

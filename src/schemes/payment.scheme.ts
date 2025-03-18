@@ -1,5 +1,5 @@
-import { PaymentMethod } from './../buyer.interface';
 import Joi, { ObjectSchema } from 'joi';
+import { PaymentMethod } from '../payment.interface';
 
 const paymentScheme: ObjectSchema = Joi.object().keys({
   method: Joi.string()
@@ -9,8 +9,6 @@ const paymentScheme: ObjectSchema = Joi.object().keys({
       'any.required': 'Payment method is required',
       'any.only': 'Invalid payment method',
     }),
-  transactionId: Joi.string().optional(),
-  metadata: Joi.object().optional(),
 });
 
 export { paymentScheme };

@@ -1,21 +1,16 @@
-import { IPayment, IShippingAddress } from './buyer.interface';
+import { IShippingAddress } from './buyer.interface';
+import { ICartItem } from './cart-item.interface';
 
 type OrderType =
   | string
   | number
   | boolean
-  | IOrderItem[]
+  | ICartItem[]
   | IShippingAddress
-  | IPayment
+  | IOrderPayment
   | OrderStatus
   | Date
   | undefined;
-
-export interface IOrderItem {
-  productPublicId: string;
-  quantity: number;
-  price: number;
-}
 
 export enum OrderStatus {
   pending = 'pending',
@@ -25,16 +20,24 @@ export enum OrderStatus {
   delivered = 'delivered',
 }
 
+export interface IOrderPayment {
+  paymentPublicId: string;
+  method: string;
+  status: string;
+}
+
 export interface IOrderDocument extends Record<string, OrderType> {
   orderPublicId?: string;
   buyerPublicId: string;
-  items: IOrderItem[];
+  items: ICartItem[];
   totalAmount?: number;
   shippingFee: number;
   shipping: IShippingAddress;
-  payment: IPayment;
+  payment: IOrderPayment;
   paidAt?: Date | string;
   isPaid?: boolean;
+  deliveredAt?: Date | string;
+  isDelivered?: boolean;
   status?: OrderStatus;
   notes?: string;
   createdAt?: Date | string;

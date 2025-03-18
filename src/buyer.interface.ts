@@ -1,3 +1,5 @@
+import { PaymentMethod } from './payment.interface';
+
 export interface IBuyerDocument {
   buyerPublicId?: string;
   authId: string;
@@ -6,7 +8,7 @@ export interface IBuyerDocument {
   email: string;
   purchasedProducts: string[];
   shippingAddress?: IShippingAddress;
-  payment?: IPayment;
+  payment?: IBuyerPayment;
   createdAt?: Date | string;
 }
 
@@ -17,16 +19,6 @@ export interface IShippingAddress {
   postalCode: string;
 }
 
-export interface IPayment {
+export interface IBuyerPayment {
   method?: PaymentMethod;
-  transactionId?: string;
-  metadata?: Record<string, any>;
-}
-
-export enum PaymentMethod {
-  cod = 'cod',
-  credit = 'credit',
-  paypal = 'paypal',
-  stripe = 'stripe',
-  crypto = 'crypto',
 }
