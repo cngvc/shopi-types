@@ -3,6 +3,7 @@ import { IPayment, IShippingAddress } from './buyer.interface';
 type OrderType =
   | string
   | number
+  | boolean
   | IOrderItem[]
   | IShippingAddress
   | IPayment
@@ -33,6 +34,7 @@ export interface IOrderDocument extends Record<string, OrderType> {
   shipping: IShippingAddress;
   payment: IPayment;
   paidAt?: Date | string;
+  isPaid?: boolean;
   status?: OrderStatus;
   notes?: string;
   createdAt?: Date | string;
