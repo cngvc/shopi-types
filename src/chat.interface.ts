@@ -1,24 +1,23 @@
-type ConversationType = string | string[] | ILastMessage | Date | undefined;
+export interface IConversationParticipant {
+  authId: string;
+  username: string;
+}
 
-export type ILastMessage = {
+export interface ILastMessage {
   messagePublicId: string;
   senderAuthId: string;
   body: string;
   createdAt?: Date | string;
-};
-
-export interface IConversationDocument
-  extends Record<string, ConversationType> {
-  conversationPublicId?: string;
-  participants: string[];
-  lastMessage?: ILastMessage;
-  updatedAt?: Date | string;
-  [key: string]: ConversationType;
 }
 
-type MessageType = string | boolean | Date | undefined;
+export interface IConversationDocument {
+  conversationPublicId?: string;
+  participants: IConversationParticipant[];
+  lastMessage?: ILastMessage;
+  updatedAt?: Date | string;
+}
 
-export interface IMessageDocument extends Record<string, MessageType> {
+export interface IMessageDocument {
   messagePublicId?: string;
   conversationPublicId: string;
   senderAuthId: string;
@@ -26,5 +25,4 @@ export interface IMessageDocument extends Record<string, MessageType> {
   isRead?: boolean;
   body: string;
   createdAt?: Date | string;
-  [key: string]: MessageType;
 }
