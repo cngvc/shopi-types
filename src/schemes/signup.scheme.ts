@@ -20,6 +20,7 @@ export const signupSchema: ObjectSchema = Joi.object().keys({
       'string.email': 'Invalid email',
       'string.empty': 'Email is required',
     }),
+  deviceInfo: Joi.string().optional().allow(null, ''),
 });
 
 export const signupClientSchema = Joi.object({

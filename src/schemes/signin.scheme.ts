@@ -23,4 +23,5 @@ export const signinSchema: ObjectSchema = Joi.object().keys({
     'string.min': 'Invalid password',
     'string.empty': 'Password is required',
   }),
+  deviceInfo: Joi.string().optional().allow(null, ''),
 });
