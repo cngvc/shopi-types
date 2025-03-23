@@ -1,3 +1,4 @@
+export { signoutSchema, refreshTokenSchema } from './auth.scheme';
 export { createConversionSchema, sendMessageSchema } from './chat.scheme';
 export {
   changePasswordSchema,
