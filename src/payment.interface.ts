@@ -2,6 +2,7 @@ export interface IPaymentDocument {
   paymentPublicId?: string;
   orderPublicId: string;
   transactionId?: string;
+  paymentIntentId?: string;
   method?: PaymentMethod;
   totalAmount?: number;
   currency: string;
