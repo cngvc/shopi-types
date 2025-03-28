@@ -11,3 +11,4 @@ export { signupClientSchema, signupSchema } from './signup.scheme';
 export { createStoreSchema } from './store.scheme';
 export { paymentScheme } from './payment.scheme';
 export { shippingAddressSchema } from './shipping-address.scheme';
+export { updateUserBalanceSchema } from './balance.scheme';

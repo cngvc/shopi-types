@@ -28,3 +28,10 @@ export { SocketEvents } from './socket-events';
 export * from './schemes';
 
 export { ElasticsearchIndexes } from './elasticsearch-indexes';
+
+export {
+  IBalance,
+  IBalanceTransaction,
+  BalanceType,
+  DepositMethod,
+} from './balance.interface';
