@@ -14,6 +14,7 @@ export interface IBalanceTransaction {
   transactionType: BalanceType;
   orderPublicId?: string;
   paymentPublicId?: string;
+  balance?: IBalance;
   createdAt?: Date;
 }
 
